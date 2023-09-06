@@ -1,0 +1,9 @@
+meradeen gmail account used for firebase
+flutter build web --no-sound-null-safety
+flutter build web --no-sound-null-safety --web-renderer canvaskit --release // for mobile browser
+flutter build web --no-sound-null-safety --web-renderer canvaskit
+flutter build web --web-renderer canvaskit
+flutter run -d web-server --no-sound-null-safety --web-port 8080 --web-hostname 0.0.0.0 // for local run
+
+flutter build web --no-sound-null-safety --web-renderer html --release //for IOs //tested and not working
+https://stackoverflow.com/questions/67863874/flutter-web-hangs-on-ios-safari-chrome-with-no-errors#:~:text=Try%20running%20flutter%20build%20web,in%20ios%20chrome%2Fsafari%20browser.
