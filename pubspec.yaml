@@ -45,7 +45,6 @@ dependencies:
   uiblock: ^2.0.1
   device_info_plus: ^9.0.3
   app_settings: ^5.0.0
-  package_info_plus: ^4.1.0
   shared_preferences: ^2.0.6
   platform_device_id: ^1.0.1
   url_launcher: ^6.1.5

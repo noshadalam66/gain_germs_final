@@ -1,8 +1,7 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
 import 'package:gain_germs_final/Models/user_details.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 var userLanguage;
 bool isRegularFont = true;
 
@@ -49,9 +48,6 @@ List<String> activatedAccountList = [];
 
 String deviceExceededUserName = "";
 
-String _notiBadge = "notificationBadge";
-MethodChannel _channel = const MethodChannel('com.qib.mb/encryption');
-
 setDeviceExceededUserName(dynamic obj) {
   deviceExceededUserName = obj;
 }
@@ -88,9 +84,6 @@ setStaticDataLoadedHome(bool isData) {
 
 bool getStaticDataLoadedHome() {
   return true;
-}
-
-setAppPackageInfo(PackageInfo obj) {
 }
 
 

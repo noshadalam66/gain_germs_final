@@ -1,6 +1,6 @@
 {
-    "name": "gain_germs_final",
-    "short_name": "gain_germs_final",
+    "name": "GainGerms",
+    "short_name": "GainGerms",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
