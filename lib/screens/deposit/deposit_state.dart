@@ -1,4 +1,4 @@
-import '../../Models//user_details.dart';
+import '../../Models/user_details.dart';
 import 'package:equatable/equatable.dart';
 // import 'package:qib/Models//myProducts/my_cards_model.dart';
 

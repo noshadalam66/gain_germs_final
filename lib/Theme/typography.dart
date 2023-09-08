@@ -1,4 +1,3 @@
-// Text Field Style
 import 'dart:ui';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,20 +43,23 @@ class GainGermsText {
       this.underline,
       this.fontStyle});
   TextStyle style() {
-    final int fontSize = getIsRegularFont()
-        ? fontConfig[typo!]!['font'] as int
-        : blockZoom != null && blockZoom!
-            ? fontConfig[typo!]!['font'] as int
-            : fontConfig[typo!]!['zoomFont'] as int;
+    int fontInt = fontConfig[typo!]!['font'] as int;
+    String fontString = fontInt.toString();
+    // final int fontSize = getIsRegularFont()
+    //     ? fontConfig[typo!]!['font'] as int
+    //     : blockZoom != null && blockZoom!
+    //         ? fontConfig[typo!]!['font'] as int
+    //         : fontConfig[typo!]!['zoomFont'] as int;
     ////print\(fontSize);
     return TextStyle(
+      fontSize: double.parse(fontString),
       fontFamily: fontFamiliy != null
           ? fontFamiliy
           : ((isBold != null) && isBold! ? getBoldFont() : getRegularFont()),
       fontStyle: fontStyle ?? FontStyle.normal,
-      fontSize: ScreenUtil().setSp(
-        fontSize,
-      ),
+      // fontSize: ScreenUtil().setSp(
+      //   fontSize,
+      // ),
       color: (color == null) ? GainGermsTheme().getTheme().headerColor : color,
       decoration: (underline != null) && underline!
           ? TextDecoration.underline

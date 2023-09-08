@@ -1,14 +1,67 @@
+import 'dart:html';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gain_germs_final/routes/app.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_strategy/url_strategy.dart';
 import 'dart:convert';
 import 'Models/commonmodel.dart';
 import 'Models/user_details.dart';
 import 'constants/constants.dart';
+import 'firebase_options.dart';
 import 'helper/shared_preferences.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyAED0AxDxgrCQGu0FnsvUKuQl-Szjuoa9U", appId: "1:442911630671:web:537f250d387e9c77ced13a", messagingSenderId: "442911630671", projectId: "gaingerms"));
+  // await EasyLocalization.ensureInitialized();
+
+  String url = window.location.href;
+  print('The URL is: $url');
+  url = url.split('#/').join();
+
+  Uri uri = Uri.parse(url);
+
+  invitedby = uri.queryParameters['invitedby'] ?? ""; // id = "123"
+  // String? name = uri.queryParameters['name']; // name = "john"
+  path = uri.path; // path = "/page"
+  // String? scheme = uri.scheme; // scheme = "https"
+  // String? host = uri.host; // host = "example.com"
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  setPathUrlStrategy();
+
+  var userLanguage = "en_US"; //await getStringValuesSF("AppLanguage");
+  if (userLanguage == '') {
+    final String defaultLocale = "en_US";//Platform.localeName;
+    if (defaultLocale == 'en_US') {
+      userLanguage = "en";
+      // await addStringToSF("AppLanguage", "en");
+    } else if (defaultLocale == 'ar_DZ') {
+      userLanguage = "ar";
+      // await addStringToSF("AppLanguage", "ar");
+    }
+  }
+
+  bool isUserLoggedIn = await getBoolValuesSF(isLoggedIn);
+
+  // runApp(EasyLocalization(
+  //     supportedLocales: [Locale('en', 'US'), Locale('ar', 'DZ')],
+  //     path: 'assets/langs',
+  //     fallbackLocale: Locale('en', 'US'),
+  //     child: App(
+  //       isLoggedIn: isUserLoggedIn,
+  //     )),);
+
+  runApp(App(
+    isLoggedIn: isUserLoggedIn,
+  ));
+
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

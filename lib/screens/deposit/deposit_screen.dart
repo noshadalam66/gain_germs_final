@@ -1,5 +1,5 @@
 import '../../Theme/theme.dart';
-import '../../Models//user_details.dart';
+import '../../Models/user_details.dart';
 import '../../screens/deposit/deposit_bloc.dart';
 import '../../screens/deposit/deposit_event.dart';
 import '../../screens/deposit/deposit_state.dart';

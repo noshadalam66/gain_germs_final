@@ -14,9 +14,9 @@ class App extends StatelessWidget {
       title: 'GainGerms',
       routeInformationParser: RoutesInformationParser(),
       routerDelegate: AppRouterDelegate(isLoggedIn: isLoggedIn),
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
+      // localizationsDelegates: context.localizationDelegates,
+      // supportedLocales: context.supportedLocales,
+      // locale: context.locale,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: bgColor,
         textTheme: Theme.of(context).textTheme
