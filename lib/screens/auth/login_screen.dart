@@ -404,12 +404,12 @@ class LoginScreenState extends State<LoginScreen> {
     // 'Accept': '*/*'
     // };
 
-    final response = await http.post(headers: <String, String>{"access_control_allow_origin": "*"}, uri, body: <String, String>{
+    final response = await http.post(uri, body: <String, String>{
       'email': email,
       'password': password,
       'currentTime': DateTime.now().millisecondsSinceEpoch.toString(),
     });
-
+    // var uri = Uri.https('gaingerms.com', 'gainGermSit/login.php');
     // final response = await http.post(
     //   Uri.parse('https://gaingerms.com/gainGermSit/login.php'),
     //   body: <String, String>{

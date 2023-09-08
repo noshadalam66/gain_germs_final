@@ -45,9 +45,9 @@ class UpdateSmartContractSignedToServer extends SmartContractEvent{
   @override
   Stream<SmartContractState> applyAsync({SmartContractState? currentState,
     SmartContractBloc? bloc}) async* {
-
+    var uri = Uri.https('gaingerms.com', 'gainGermSit/smart_contract.php');
     final response = await http.post(
-      Uri.parse('https://gaingerms.com/gainGermSit/smart_contract.php'),
+      uri,
       body: <String, String>{
         'smartContractTime': smartContractTime,
         'userLevel': userLevel.toString(),

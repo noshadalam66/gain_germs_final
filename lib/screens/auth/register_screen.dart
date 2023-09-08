@@ -484,9 +484,9 @@ class RegisterScreenState extends State<RegisterScreen> {
 
 
   registerUser(BuildContext context, String fullName, String email, String password, String phoneNumberString, String refBy, String refCode) async {
-
+    var uri = Uri.https('gaingerms.com', 'gainGermSit/register.php');
     final response = await http.post(
-      Uri.parse('https://gaingerms.com/gainGermSit/register.php'),
+      uri,
       body: <String, String>{
         'fullName': fullName,
         'email': email,

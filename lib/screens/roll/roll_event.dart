@@ -45,9 +45,9 @@ class UpdateRollToServer extends RollEvent{
   @override
   Stream<RollState> applyAsync({RollState? currentState,
     RollBloc? bloc}) async* {
-
+    var uri = Uri.https('gaingerms.com', 'gainGermSit/roll.php');
     final response = await http.post(
-      Uri.parse('https://gaingerms.com/gainGermSit/roll.php'),
+      uri,
       body: <String, String>{
         'rollTime': rollTime,
         'userLevel': userLevel.toString(),

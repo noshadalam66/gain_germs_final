@@ -47,8 +47,9 @@ class EnrollLotteryToServer extends LotteryEvent{
     LotteryBloc? bloc}) async* {
     var uuid = Uuid();
     String uuidString = uuid.v4().substring(0, 13);
+    var uri = Uri.https('gaingerms.com', 'gainGermSit/enroll_lottrery.php');
     final response = await http.post(
-      Uri.parse('https://gaingerms.com/gainGermSit/enroll_lottrery.php'),
+      uri,
       body: <String, String>{
         'ticketBoughtTime': ticketBoughtTime,
         'userLevel': userLevel.toString(),

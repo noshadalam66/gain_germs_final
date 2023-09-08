@@ -59,8 +59,9 @@ class updateLastOnlineTimeToServer extends DashboardEvent{
       day = DateTime.now().day.toString();
 
     String date = "${DateTime.now().year}-${month}-${day}";
+    var uri = Uri.https('gaingerms.com', 'gainGermSit/online.php');
     final response = await http.post(
-      Uri.parse('https://gaingerms.com/gainGermSit/online.php'),
+      uri,
       body: <String, String>{
         'userLevel': userLevel.toString(),
         'userLevelPoints': userLevelPoints.toString(),
