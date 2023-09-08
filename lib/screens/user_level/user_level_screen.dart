@@ -160,7 +160,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
         children: [
           Expanded(flex: 5, child: getFirstLayout(size)),
           Container(
-            child: Text("\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"),
+            child: Text("\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"),
             decoration: BoxDecoration(
               color: GainGermsTheme().getTheme().backGroundColor,
               borderRadius: const BorderRadius.all(Radius.circular(10)),
@@ -498,6 +498,13 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                           ),
                         )
                       ],
+                    ),
+                  ),
+                  Container(
+                    child: Text("\n  \n\n\n"),
+                    decoration: BoxDecoration(
+                      color: GainGermsTheme().getTheme().backGroundColor,
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
                   ),
                   Expanded(
