@@ -7,7 +7,7 @@ import '../../../Models//MyFiles.dart';
 import '../../../Models/user_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import '../../../constants/constants.dart';
 import 'package:provider/provider.dart';
 
@@ -205,17 +205,17 @@ class _SecondThreeLayoutInfoCardState extends State<SecondThreeLayoutInfoCard> {
     var size = MediaQuery.of(context).size;
     String firstText = "", secondText = "", buttonText = "";
     if(widget.index == 0){
-      firstText = 'invite_earn'.tr().toString();
-      secondText = 'for_each_registered_user_you_get_germs'.tr().toString();
-      buttonText = 'go_to_referrals'.tr().toString();
+      firstText = "Invite & Earn";
+      secondText = "For each Registered user you will earn 5 Germs";
+      buttonText = "Go to Referrals";
     }else if(widget.index == 1){
-      firstText = isRollDoneWithinOneHour == true ? 'next_roll'.tr().toString() : 'time_to_roll!'.tr().toString();
-      secondText = isRollDoneWithinOneHour == true ? '${hoursRoll}:${minutesRoll}:${secondsRoll}' : 'get_up_to_1000_germs_for_free'.tr().toString();
-      buttonText = 'go_to_roll'.tr().toString();
+      firstText = isRollDoneWithinOneHour == true ? "Next Roll" : "Time to Roll";
+      secondText = isRollDoneWithinOneHour == true ? '${hoursRoll}:${minutesRoll}:${secondsRoll}' : "Get up-to 1000 Germs for free";
+      buttonText = "Go to Roll";
     }else if(widget.index == 2){
-      firstText = 'sold_out'.tr().toString();
-      secondText = 'lottery_tickets_left'.tr().toString();
-      buttonText = 'buy_now'.tr().toString();
+      firstText = "Sold Out";
+      secondText = "Lottery tickets left";
+      buttonText = "Buy now";
     }
     return Container(
       padding: EdgeInsets.all(defaultPadding),

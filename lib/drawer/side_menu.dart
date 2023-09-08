@@ -5,7 +5,6 @@ import '../screens/roll/roll_screen.dart';
 import '../util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:provider/provider.dart';
 
 import '../constants/constants.dart';
@@ -40,7 +39,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'dashboard'.tr().toString(),
+              "Dashboard",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 0 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -62,7 +61,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'roll'.tr().toString(),
+              "Roll",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 1 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -79,7 +78,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'deposits'.tr().toString(),
+              "Deposits",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 2 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -99,7 +98,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'withdrawal'.tr().toString(),
+              "Withdrawal",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 3 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -119,7 +118,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'lottery'.tr().toString(),
+              "Lottery",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 4 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -139,7 +138,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'user_level'.tr().toString(),
+              "User Level",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 5 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -159,7 +158,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'referrals'.tr().toString(),
+              "Referrals",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 6 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -179,7 +178,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'smart_contract'.tr().toString(),
+              "Smart Contract",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 7 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -199,7 +198,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'faq'.tr().toString(),
+              "FAQ",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 8 ? GainGermsTheme().getTheme().buttonColor : null,
@@ -219,7 +218,7 @@ class SideMenuState extends State<SideMenu> {
               height: 22,
             ),
             title: Text(
-              'logout'.tr().toString(),
+              "Logout",
               style: TextStyle(color: Colors.white54),
             ),
             tileColor: AppConstant.selectedIndex == 9 ? GainGermsTheme().getTheme().buttonColor : null,

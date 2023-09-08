@@ -2,7 +2,7 @@ import 'dart:math';
 
 // import '../../../../Models/MyFiles.dart';
 import '../../../Models/user_details.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,20 +30,20 @@ class ThirdFourLayoutInfoCard extends StatelessWidget {
       double gp = double.parse(info?.customerData?.gainPrice ?? "0.0");
       double amount = tg * gp;
 
-      firstText = 'dollar_sign'.tr().toString() + " " + "${amount.toStringAsFixed(2)}";
-      secondText = 'balance'.tr().toString();
+      firstText = "USD" + " " + "${amount.toStringAsFixed(2)}";
+      secondText = "Balance";
       iconString = "assets/images/roll.png";
     }else if(index == 1){
-      firstText = "${info?.customerData?.totalGains}"  + " " + 'germs'.tr().toString();
-      secondText = 'balance'.tr().toString();
+      firstText = "${info?.customerData?.totalGains}"  + " " + "Germs";
+      secondText = "Balance";
       iconString = "assets/images/card.png";
     }else if(index == 2){
-      firstText = 'dollar_sign'.tr().toString() + " " + "${info?.customerData?.gainPrice}";
-      secondText = 'germs_price'.tr().toString();
+      firstText = "USD" + " " + "${info?.customerData?.gainPrice}";
+      secondText = "Germs Price";
       iconString = "assets/images/graph.png";
     }else if(index == 3){
-      firstText = "${info?.customerData?.depositedGains}"  + " " + 'germs'.tr().toString();
-      secondText = 'deposits'.tr().toString();
+      firstText = "${info?.customerData?.depositedGains}"  + " " + "Germs";
+      secondText = "Deposits";
       iconString = "assets/images/deposit.png";
     }
 

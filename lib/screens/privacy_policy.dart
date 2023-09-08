@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -40,7 +40,7 @@ class _PrivacyPolicy extends State<PrivacyPolicy> {
                       margin: EdgeInsets.only(
                           left: 10.0, top: 5.0, right: 20.0, bottom: 5.0),
                       child: Text(
-                        'privacy_policy'.tr().toString(),
+                        "Privacy Policy",
                         style: kLoginTitleStyle(size, Colors.white),
                         textAlign: TextAlign.left,
                       ),

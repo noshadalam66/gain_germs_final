@@ -15,7 +15,7 @@ import '../../Models/random_winner_model.dart';
 import '../../helper/shared_preferences.dart';
 import '../../util/routes.dart';
 import '../../Theme/theme.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import '../../header/header.dart';
@@ -129,7 +129,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'user_level'.tr().toString(),
+                      "User Level",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -272,7 +272,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'category'.tr().toString(),
+                    "Category",
                     style: headingOne(size, Colors.white),
                   ),
                   SizedBox(height: defaultPadding),
@@ -300,7 +300,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                       ),
                       SizedBox(width: 3),
                       Text(
-                        'online'.tr().toString(),
+                        "Online",
                         style: Theme.of(context).textTheme.caption!.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -321,7 +321,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                     ),
                     SizedBox(width: 3),
                     Text(
-                      'free'.tr().toString(),
+                      "Free",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -341,7 +341,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                     ),
                     SizedBox(width: 3),
                     Text(
-                      'referrals'.tr().toString(),
+                      "Referrals",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -361,7 +361,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                     ),
                     SizedBox(width: 3),
                     Text(
-                      'videos'.tr().toString(),
+                      "Videos",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -381,7 +381,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                     ),
                     SizedBox(width: 3),
                     Text(
-                      'smart_contract'.tr().toString(),
+                      "Smart-Contract",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -401,7 +401,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                     ),
                     SizedBox(width: 3),
                     Text(
-                      'lottery'.tr().toString(),
+                      "Lottery",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -429,7 +429,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'current_level'.tr().toString(),
+                "Current Level",
                 style: headingOne(size, Colors.white),
               ),
               SizedBox(height: defaultPadding),
@@ -474,7 +474,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                         Container(
                           alignment: Alignment.center,
                           child: Text(
-                            'current_level'.tr().toString(),
+                            "Current Level",
                             style: Theme.of(context)
                                 .textTheme
                                 .caption!
@@ -508,7 +508,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                           Container(
                             alignment: Alignment.center,
                             child: Text(
-                              'level_award'.tr().toString(),
+                              "Level Award",
                               style: Theme.of(context)
                                   .textTheme
                                   .caption!
@@ -521,7 +521,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                           Container(
                             alignment: Alignment.center,
                             child: Text(
-                              "${userResponse?.customerData?.levelAward}" + " " + 'germs'.tr().toString(),
+                              "${userResponse?.customerData?.levelAward}" + " " + "Germs",
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge!
@@ -553,7 +553,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'activity_timeline'.tr().toString(),
+            "Activity Timeline",
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -603,11 +603,11 @@ class UserLevelScreenState extends State<UserLevelScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'bonus_table'.tr().toString(),
+            "Bonus Table",
             style: headingOne(size, Colors.white),
           ),
           Text(
-            'reward_for_the_following_action'.tr().toString(),
+            "Reward for the Following Actions",
             style: kLoginTermsAndPrivacyStyle(size, Colors.white),
           ),
 
@@ -617,7 +617,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('new_day_activity'.tr().toString(),
+              Text("New Day Activity",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -627,7 +627,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+1 point'.tr().toString(),
+                  "+1 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -648,7 +648,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('free_roll'.tr().toString(),
+              Text("Free Roll",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -658,7 +658,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+1 point'.tr().toString(),
+                  "+1 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -679,7 +679,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('invitation_of_a_friend'.tr().toString(),
+              Text("Invitation of a Friend",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -689,7 +689,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+5 point'.tr().toString(),
+                  "+5 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -710,7 +710,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('referral_reached_second_level'.tr().toString(),
+              Text("Referrals reached to 2nd Level",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -720,7 +720,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+10 point'.tr().toString(),
+                  "+10 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -741,7 +741,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('smart_contract_was_concluded'.tr().toString(),
+              Text("Smart Contract was Concluded",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -751,7 +751,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+2 point'.tr().toString(),
+                  "+2 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -772,7 +772,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('smart_contract_was_confirmed'.tr().toString(),
+              Text("Smart Contract was Confirmed",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -782,7 +782,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+1 point'.tr().toString(),
+                  "+1 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -803,7 +803,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('smart_contract_was_singed'.tr().toString(),
+              Text("Smart Contract was Singed",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -813,7 +813,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+5 point'.tr().toString(),
+                  "+5 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -834,7 +834,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('play_lottery'.tr().toString(),
+              Text("Play Lottery",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -844,7 +844,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+2 point'.tr().toString(),
+                  "+2 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -865,7 +865,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('youtube_video_watched'.tr().toString(),
+              Text("Youtube Video Watched",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -875,7 +875,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+1 point'.tr().toString(),
+                  "+1 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -896,7 +896,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('new_video_was_approved'.tr().toString(),
+              Text("New Video was Approved",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.normal)),
               Container(
@@ -906,7 +906,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Text(
-                  '+10 point'.tr().toString(),
+                  "+10 point",
                   style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),

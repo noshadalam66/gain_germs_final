@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../Theme/theme.dart';
 import '../constants/constants.dart';
@@ -41,7 +41,7 @@ class _TermAndCondition extends State<TermAndCondition> {
                   Container(
                     margin: EdgeInsets.only(left: 10.0, top: 5.0, right: 20.0, bottom: 5.0),
                     child: Text(
-                      'term_condition'.tr().toString(),
+                      "Terms and Conditions",
                       style: kLoginTitleStyle(size, Colors.white),
                       textAlign: TextAlign.left,
                     ),

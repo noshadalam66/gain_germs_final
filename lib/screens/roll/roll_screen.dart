@@ -6,7 +6,7 @@ import '../../Models/user_details.dart';
 import '../../screens/roll/index.dart';
 import '../../screens/roll/random_winner.dart';
 import '../../screens/roll/rolling.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import '../../header/header.dart';
@@ -268,7 +268,7 @@ class RollScreenState extends State<RollScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'roll'.tr().toString(),
+                      "Roll",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -440,13 +440,13 @@ class RollScreenState extends State<RollScreen> {
               Text(
                 "${userResponse?.customerData?.totalGainsEarnFromSpin}" +
                     " " +
-                    'germs'.tr().toString(),
+                    "Germs",
                 textAlign: TextAlign.center,
                 style: headingOne(size, Colors.white),
               ),
               SizedBox(height: defaultPadding / 1.5),
               Text(
-                'total_won'.tr().toString(),
+                "Total Won",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white,
@@ -500,7 +500,7 @@ class RollScreenState extends State<RollScreen> {
               ),
               SizedBox(height: defaultPadding / 1.5),
               Text(
-                'total_rolls'.tr().toString(),
+                "Total Roll",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white,
@@ -546,7 +546,7 @@ class RollScreenState extends State<RollScreen> {
               Text(
                   isRollDoneWithinOneHour == true
                       ? '${hours}:${minutes}:${seconds}'
-                      : 'time_to_roll'.tr().toString(),
+                      : "Time to Roll",
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headline6!.copyWith(
                         color: Colors.white,
@@ -556,7 +556,7 @@ class RollScreenState extends State<RollScreen> {
 
               Text(
                   isRollDoneWithinOneHour == true
-                      ? 'next_roll'.tr().toString()
+                      ? "Next Roll"
                       : "",
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption!.copyWith(
@@ -583,7 +583,7 @@ class RollScreenState extends State<RollScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'free_germs'.tr().toString(),
+            "Free Germs",
             style: headingOne(size, Colors.white),
           ),
           SizedBox(
@@ -604,7 +604,7 @@ class RollScreenState extends State<RollScreen> {
                 // minWidth: 600,
                 columns: [
                   DataColumn(
-                    label: Text('lucky_number'.tr().toString(),
+                    label: Text("lucky number is",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -613,7 +613,7 @@ class RollScreenState extends State<RollScreen> {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('payout'.tr().toString(),
+                    label: Text("Payout",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -656,7 +656,7 @@ class RollScreenState extends State<RollScreen> {
                   startTimerForRoll();
                 }
               },
-              child: Text('roll>>'.tr().toString()),
+              child: Text("Roll>>"),
             ),
           ),
           SizedBox(
@@ -667,11 +667,11 @@ class RollScreenState extends State<RollScreen> {
             child: isRolling == false
                 ? Text(
                     isRollDoneWithinOneHour == true
-                        ? 'you_win'.tr().toString() +
+                        ? "You Win" +
                             " " +
                             "${userResponse?.customerData?.winningGains}" +
                             " " +
-                            'germs'.tr().toString()
+                            "Germs"
                         : "",
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
@@ -686,7 +686,7 @@ class RollScreenState extends State<RollScreen> {
             child: isRolling == false
                 ? Text(
                     isRollDoneWithinOneHour == true
-                        ? 'number'.tr().toString() + " " + "${userResponse?.customerData?.rollNumber}"
+                        ? "Number" + " " + "${userResponse?.customerData?.rollNumber}"
                         : "",
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold))

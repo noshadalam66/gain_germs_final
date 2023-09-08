@@ -1,6 +1,6 @@
 import '../../../Theme/theme.dart';
 import '../../../Models/user_details.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 
 // import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,7 @@ class LastThreeReferrals extends StatelessWidget {
                 // minWidth: 600,
                 columns: [
                   DataColumn(
-                    label: Text('name'.tr().toString() + "   ",
+                    label: Text("Name" + "   ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -66,7 +66,7 @@ class LastThreeReferrals extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('status'.tr().toString() + "      ",
+                    label: Text("Status" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -75,7 +75,7 @@ class LastThreeReferrals extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('progress'.tr().toString() + "      ",
+                    label: Text("Progress" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -84,7 +84,7 @@ class LastThreeReferrals extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('level'.tr().toString() + "      ",
+                    label: Text("Level" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -93,7 +93,7 @@ class LastThreeReferrals extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('last_activity'.tr().toString() + "   ",
+                    label: Text("Last Activity" + "   ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -138,7 +138,7 @@ DataRow recentFileDataRow(Referrals fileInfo, BuildContext context, int index) {
                 color: Colors.orange, borderRadius: BorderRadius.circular(8)),
           ),
           SizedBox(width: 4,),
-          Text('in_progress'.tr().toString(),
+          Text("In Progress",
               style: Theme.of(context)
                   .textTheme
                   .caption!
@@ -154,7 +154,7 @@ DataRow recentFileDataRow(Referrals fileInfo, BuildContext context, int index) {
                 color: Colors.green, borderRadius: BorderRadius.circular(8)),
           ),
           SizedBox(width: 4,),
-          Text('completed'.tr().toString(),
+          Text("Completed",
               style: Theme.of(context)
                   .textTheme
                   .caption!
@@ -174,7 +174,7 @@ DataRow recentFileDataRow(Referrals fileInfo, BuildContext context, int index) {
               .copyWith(color: Colors.white))
       ),
       DataCell(
-        Text("${userLevel} " + 'level_caps'.tr().toString(),
+        Text("${userLevel} " + "LEVEL",
             style: Theme.of(context)
                 .textTheme
                 .caption!

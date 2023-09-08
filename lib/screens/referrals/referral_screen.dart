@@ -8,7 +8,7 @@ import '../../Models/commonmodel.dart';
 import '../../helper/shared_preferences.dart';
 import '../../util/routes.dart';
 import '../../Theme/theme.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 import '../../header/header.dart';
@@ -114,7 +114,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'referrals'.tr().toString(),
+                      "Referrals",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -276,7 +276,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                 Container(
                   padding: EdgeInsets.all(defaultPadding * 0.65),
                   child: Text(
-                    'referral_link'.tr().toString(),
+                    "Referral Link",
                     style: headingOne(size, Colors.white),
                   ),
                 ),
@@ -330,10 +330,10 @@ class ReferralScreenState extends State<ReferralScreen> {
                               .then((_) {
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                 content: Text(
-                                    'app_link_is_copied'.tr().toString())));
+                                  "App link is copied to clipboard",)));
                           });
                         },
-                        child: Text('copy'.tr().toString()),
+                        child: Text("Copy!",),
                       ),
                     ]),
                 // Icon(Icons.more_vert, color: Colors.white54)
@@ -345,7 +345,7 @@ class ReferralScreenState extends State<ReferralScreen> {
               children: [
                 Container(
                   child: Text(
-                    'referral_link'.tr().toString(),
+                    "Referral Link",
                     style: headingOne(size, Colors.white),
                   ),
                 ),
@@ -395,10 +395,10 @@ class ReferralScreenState extends State<ReferralScreen> {
                                 "${userResponse?.customerData?.refCode}"))
                         .then((_) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text('app_link_is_copied'.tr().toString())));
+                          content: Text("App link is copied to clipboard")));
                     });
                   },
-                  child: Text('copy'.tr().toString()),
+                  child: Text("Copy!"),
                 ),
               ],
             ),
@@ -435,7 +435,7 @@ class ReferralScreenState extends State<ReferralScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'total_invited'.tr().toString(),
+            "Total Invited",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -476,7 +476,7 @@ class ReferralScreenState extends State<ReferralScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'in_pending'.tr().toString(),
+            "In Pending",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -501,7 +501,7 @@ class ReferralScreenState extends State<ReferralScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'retention'.tr().toString(),
+                "Retention",
                 style: headingOne(size, Colors.white),
               ),
               Column(
@@ -519,7 +519,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   ),
                     SizedBox(width: 3),
                     Text(
-                      'active_referrals'.tr().toString(),
+                      "Active Referrals",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                         color: Colors.white,
                       ),
@@ -536,7 +536,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   ),
                     SizedBox(width: 3),
                     Text(
-                      'retained_referrals'.tr().toString(),
+                      "Retained Referrals",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                         color: Colors.white,
                       ),
@@ -553,7 +553,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   ),
                     SizedBox(width: 3),
                     Text(
-                      'inactive_referrals'.tr().toString(),
+                      "Inactive Referrals",
                       style: Theme.of(context).textTheme.caption!.copyWith(
                         color: Colors.white,
                       ),
@@ -588,7 +588,7 @@ class ReferralScreenState extends State<ReferralScreen> {
           Container(
             padding: EdgeInsets.all(defaultPadding),
             child: Text(
-              'your_friends'.tr().toString(),
+              "Your Friends",
               style: headingOne(size, Colors.white),
             ),
           ),
@@ -605,7 +605,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                 columnSpacing: 40,
                 columns: [
                   DataColumn(
-                    label: Text('name'.tr().toString() + "   ",
+                    label: Text("Name" + "   ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -614,7 +614,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                             fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('status'.tr().toString() + "      ",
+                    label: Text("Status" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -623,7 +623,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                             fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('progress'.tr().toString() + "      ",
+                    label: Text("Progress" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -632,7 +632,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                             fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('level'.tr().toString() + "      ",
+                    label: Text("Level" + "      ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -641,7 +641,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                             fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('last_activity'.tr().toString() + "   ",
+                    label: Text("Last Activity" + "   ",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -690,7 +690,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   SizedBox(
                     width: 4,
                   ),
-                  Text('in_progress'.tr().toString(),
+                  Text("In Progress",
                       style: Theme.of(context)
                           .textTheme
                           .caption!
@@ -709,7 +709,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                   SizedBox(
                     width: 4,
                   ),
-                  Text('completed'.tr().toString(),
+                  Text("Completed",
                       style: Theme.of(context)
                           .textTheme
                           .caption!
@@ -728,7 +728,7 @@ class ReferralScreenState extends State<ReferralScreen> {
                     .caption!
                     .copyWith(color: Colors.white))),
         DataCell(
-          Text("${userLevel} " + 'level_caps'.tr().toString(),
+          Text("${userLevel} " + "LEVEL",
               style: Theme.of(context)
                   .textTheme
                   .caption!

@@ -5,7 +5,7 @@ import '../../Theme/theme.dart';
 import '../../Theme/typography.dart';
 import '../../Models/random_winner_model.dart';
 import '../../screens/roll/roll_screen.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
 
@@ -71,7 +71,7 @@ class RandomWinnersState extends State<RandomWinners> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'recent_won'.tr().toString(),
+            "Recent Wons",
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding),

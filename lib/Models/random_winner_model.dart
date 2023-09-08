@@ -1,4 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 
 String oneGain = "1 Gain";
@@ -82,22 +82,22 @@ String getDescription(int number) {
   String Description = "Win ";
 //        "Win 10 Gains - lucky number is 934\nfew second ago "
   if (number >= 0 && number < 941) {
-    Description = Description + oneGain + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + oneGain + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   } else if (number > 940 && number < 961) {
-    Description = Description + fiveGains + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + fiveGains + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   } else if (number > 960 && number < 981) {
-    Description = Description + twentyGains + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + twentyGains + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   } else if (number > 980 && number < 991) {
-    Description = Description + fiftyGains + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + fiftyGains + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   } else if (number > 990 && number < 1000) {
-    Description = Description + hundredGains + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + hundredGains + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   } else if (number == 1000) {
-    Description = Description + thousandGains + " - " + 'lucky_number_is'.tr().toString() + " "
+    Description = Description + thousandGains + " - " + "lucky number is" + " "
         + "${number}";// + " few second ago";
   }
   return Description;

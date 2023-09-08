@@ -1,7 +1,7 @@
 import '../../Theme/theme.dart';
 import '../../Models/user_details.dart';
 import '../../screens/withdraw/index.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../constants/constants.dart';
@@ -136,7 +136,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'withdrawal'.tr().toString(),
+                      "Withdrawal",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -234,7 +234,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
                 controller: _textController,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                  prefixText: 'germs'.tr().toString() + ": ",
+                  prefixText: "Germs" + ": ",
                   // prefixIcon: Icon(Icons, color: Colors.white),
                   hintText: '1',
                   hintStyle: TextStyle(color: Colors.grey),
@@ -250,7 +250,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
               child: TextField(
                 decoration: InputDecoration(
                   // prefixIcon: Icon(Icons.person, color: Colors.white),
-                  hintText: 'dollar_sign'.tr().toString() + " " + "${withdrawalAmount}",
+                  hintText: "USD" + " " + "${withdrawalAmount}",
                   hintStyle: TextStyle(color: Colors.grey),
                   enabled: false,
                   border: OutlineInputBorder(
@@ -264,7 +264,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
               flex: 2,
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'fees'.tr().toString() + ": 2%",
+                  hintText: "Fees" + ": 2%",
                   enabled: false,
                   hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(
@@ -291,7 +291,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
                 //
                 // }
               },
-              child: Text('withdraw'.tr().toString()),
+              child: Text("Withdraw"),
             ),
           ]),
     );
@@ -336,7 +336,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 // prefixIcon: Icon(Icons.person, color: Colors.white),
-                prefixText: 'germs'.tr().toString() + " ",
+                prefixText: "Germs" + " ",
                 hintText: ' ',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
@@ -348,7 +348,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
             TextField(
               decoration: InputDecoration(
                 // prefixIcon: Icon(Icons.person, color: Colors.white),
-                hintText: 'dollar_sign'.tr().toString() + " ",
+                hintText: "USD" + " ",
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -358,7 +358,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
             SizedBox(height: defaultPadding),
             TextField(
               decoration: InputDecoration(
-                hintText: 'fees'.tr().toString() + ": 2% ",
+                hintText: "Fees" + ": 2% ",
                 // prefixIcon: Icon(Icons.person, color: Colors.white),
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
@@ -384,7 +384,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
                 //
                 // }
               },
-              child: Text('withdraw'.tr().toString()),
+              child: Text("Withdraw"),
             ),
           ]),
     );
@@ -508,13 +508,13 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            "${userResponse?.customerData?.withdrawnGains}" + " " + 'germs'.tr().toString(),
+            "${userResponse?.customerData?.withdrawnGains}" + " " + "Germs",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding / 1.5),
           Text(
-            'total_withdrawal'.tr().toString(),
+            "Total Withdrawal",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -553,13 +553,13 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            'dollar_sign'.tr().toString()+ " " + "${userResponse?.customerData?.totalWithdrawalsAmount}",
+            "USD"+ " " + "${userResponse?.customerData?.totalWithdrawalsAmount}",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding / 1.5),
           Text(
-            'total_withdrawal'.tr().toString(),
+            "Total Withdrawal",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -598,13 +598,13 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            "${userResponse?.customerData?.availableGains}" + " " + 'germs'.tr().toString(),
+            "${userResponse?.customerData?.availableGains}" + " " + "Germs",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding / 1.5),
           Text(
-            'available_balance'.tr().toString(),
+            "Available Balance",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -643,13 +643,13 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            "${userResponse?.customerData?.pendingGains}" + " " + 'germs'.tr().toString(),
+            "${userResponse?.customerData?.pendingGains}" + " " + "Germs",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding / 1.5),
           Text(
-            'pending_balance'.tr().toString(),
+            "Pending Balance",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -681,7 +681,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           Container(
             padding: EdgeInsets.all(defaultPadding),
             child: Text(
-              'your_withdrawals'.tr().toString(),
+              "Your Withdrawals",
               style: headingOne(size, Colors.white),
             ),
           ),
@@ -696,27 +696,27 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
                 // minWidth: 600,
                 columns: [
                   DataColumn(
-                    label: Text('payment_system'.tr().toString(),
+                    label: Text("Payment System",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('wallet_address'.tr().toString(),
+                    label: Text("Wallet Address",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('amount'.tr().toString(),
+                    label: Text("Amount",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('status'.tr().toString(),
+                    label: Text("Status",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('date'.tr().toString(),
+                    label: Text("Date",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),

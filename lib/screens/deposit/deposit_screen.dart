@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../constants/constants.dart';
 import '../../header/header.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -137,7 +137,7 @@ class DepositScreenState extends State<DepositScreen> {
                   Header(userResponse: userResponse),
                   SizedBox(height: defaultPadding * 1.5),
                   Container(child: Text(
-                    'deposits'.tr().toString(),
+                    "Deposits",
                     style: headingOne(_size, Colors.white),
                   ), alignment: Alignment.topLeft,),
                   SizedBox(height: defaultPadding * 1.2),
@@ -162,7 +162,7 @@ class DepositScreenState extends State<DepositScreen> {
     //         Header(),
     //         SizedBox(height: defaultPadding * 1.5),
     //         Container(child: Text(
-    //           'deposits'.tr().toString(),
+    //           "Deposits",
     //           style: headingOne(_size, Colors.white),
     //         ), alignment: Alignment.topLeft,),
     //         SizedBox(height: defaultPadding * 1.2),
@@ -310,7 +310,7 @@ class DepositScreenState extends State<DepositScreen> {
           Container(
             padding: EdgeInsets.all(defaultPadding * 0.65),
             child: Text(
-              'amount'.tr().toString(),
+              "Amount",
               style: headingOne(size, Colors.white),
             ),
           ),
@@ -327,7 +327,7 @@ class DepositScreenState extends State<DepositScreen> {
                     keyboardType: TextInputType.number,
                     controller: _textController,
                     decoration: InputDecoration(
-                      prefixText: 'dollar_sign'.tr().toString() + " ",
+                      prefixText: "USD" + " ",
                       hintText: "1",
                       hintStyle: TextStyle(color: Colors.grey),
                       border: OutlineInputBorder(
@@ -341,7 +341,7 @@ class DepositScreenState extends State<DepositScreen> {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'germs'.tr().toString() + ": " + "${totalGerms}",
+                      hintText: "Germs" + ": " + "${totalGerms}",
                       enabled: false,
                       hintStyle: TextStyle(color: Colors.grey),
                       border: OutlineInputBorder(
@@ -368,7 +368,7 @@ class DepositScreenState extends State<DepositScreen> {
                     //
                     // }
                   },
-                  child: Text('deposit'.tr().toString()),
+                  child: Text("Deposit!"),
                 ),
               ]) :
           Column(
@@ -379,7 +379,7 @@ class DepositScreenState extends State<DepositScreen> {
                   keyboardType: TextInputType.number,
                   controller: _textController,
                   decoration: InputDecoration(
-                    prefixText: 'dollar_sign'.tr().toString() + " ",
+                    prefixText: "USD" + " ",
                     hintText: "1",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
@@ -391,7 +391,7 @@ class DepositScreenState extends State<DepositScreen> {
                 SizedBox(height: defaultPadding),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'germs'.tr().toString() + ": " + "${totalGerms}",
+                    hintText: "Germs" + ": " + "${totalGerms}",
                     enabled: false,
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
@@ -417,7 +417,7 @@ class DepositScreenState extends State<DepositScreen> {
                     //
                     // }
                   },
-                  child: Text('deposit'.tr().toString()),
+                  child: Text("Deposit!"),
                 ),
               ]),
           // Icon(Icons.more_vert, color: Colors.white54)
@@ -450,13 +450,13 @@ class DepositScreenState extends State<DepositScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'dollar_sign'.tr().toString() + " " + "${userResponse?.customerData?.depositedGains}",
+            "USD" + " " + "${userResponse?.customerData?.depositedGains}",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'total_deposit'.tr().toString(),
+            "Total Deposit",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -496,7 +496,7 @@ class DepositScreenState extends State<DepositScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'total_operations'.tr().toString(),
+            "Total Operations",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -528,7 +528,7 @@ class DepositScreenState extends State<DepositScreen> {
           Container(
             padding: EdgeInsets.all(defaultPadding),
             child: Text(
-              'deposit_history'.tr().toString(),
+              "Deposit History",
               style: headingOne(size, Colors.white),
             ),
           ),
@@ -542,22 +542,22 @@ class DepositScreenState extends State<DepositScreen> {
                 columnSpacing: 40, //defaultPadding,
                 columns: [
                   DataColumn(
-                    label: Text('payment_system'.tr().toString(),
+                    label: Text("Payment System",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('amount'.tr().toString(),
+                    label: Text("Amount",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('status'.tr().toString(),
+                    label: Text("Status",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('date'.tr().toString(),
+                    label: Text("Date",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:gain_germs_final/routes/route_delegate.dart';
 import 'package:gain_germs_final/routes/route_information_parser.dart';
 import '../constants/constants.dart';

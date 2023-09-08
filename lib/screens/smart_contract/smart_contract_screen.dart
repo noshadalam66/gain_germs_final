@@ -5,7 +5,7 @@ import '../../routes/route_delegate.dart';
 import '../../routes/route_handeler.dart';
 import '../../Theme/theme.dart';
 import '../../screens/smart_contract/index.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../constants/constants.dart';
@@ -180,7 +180,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'smart_contracts'.tr().toString(),
+                      "Smart Contracts",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -230,7 +230,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                         ),
                   ),
                   Text(
-                    'with'.tr().toString() + "#328u3f0",
+                    "With" + "#328u3f0",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
@@ -238,7 +238,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                         ),
                   ),
                   Text(
-                    'standard'.tr().toString(),
+                    "Standard",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
@@ -247,7 +247,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                   ),
                   SizedBox(height: defaultPadding),
                   Text(
-                    'taken'.tr().toString() + ", 10.10.2023",
+                    "Taken" + ", 10.10.2023",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
                           color: Colors.white,
@@ -255,7 +255,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                   ),
                   SizedBox(height: defaultPadding / 2),
                   Text(
-                    '+0.3 ' + 'for_signing'.tr().toString(),
+                    '+0.3 ' + "Germs for signing",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
                           color: Colors.white,
@@ -300,7 +300,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                   ),
                   SizedBox(height: defaultPadding / 2),
                   Text(isSingedContractDone == true ?
-                    'next_confirmation'.tr().toString() : '',
+                  "Next Confirmation" : '',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: Colors.white,),),
@@ -344,7 +344,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
                           });
                         }
                       },
-                      child: Text('sign'.tr().toString()),
+                      child: Text("Sign"),
                     ),
                   ),
                 ],
@@ -379,7 +379,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
             ),
           ),
           Text(
-            'with'.tr().toString() + "#328u3f0",
+            "With" + "#328u3f0",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
               color: Colors.white,
@@ -387,7 +387,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
             ),
           ),
           Text(
-            'standard'.tr().toString(),
+            "Standard",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
               color: Colors.white,
@@ -396,7 +396,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            'taken'.tr().toString() + ", 10.10.2023",
+            "Taken" + ", 10.10.2023",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.titleSmall!.copyWith(
               color: Colors.white,
@@ -404,7 +404,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            '+0.3 ' + 'for_signing'.tr().toString(),
+            '+0.3 ' + "Germs for signing",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.titleSmall!.copyWith(
               color: Colors.white,
@@ -430,7 +430,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'next_confirmation'.tr().toString(),
+            "Next Confirmation",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
               color: Colors.white,
@@ -455,7 +455,7 @@ class SmartContractScreenState extends State<SmartContractScreen> {
               //
               // }
             },
-            child: Text('sign'.tr().toString()),
+            child: Text("Sign"),
           ),
           SizedBox(height: defaultPadding * 2),
         ],

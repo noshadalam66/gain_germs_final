@@ -1,7 +1,7 @@
 import 'dart:math';
 import '../../bar_chart/bar_chart_constants.dart';
 import '../../bar_chart/users.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import '../../../constants/constants.dart';
 import '../../../Theme/theme.dart';
@@ -80,7 +80,7 @@ Widget getTwoColumn(Size size, BuildContext context, UserResponse? userResponse,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'retention'.tr().toString(),
+                      "Retention",
                       style: headingOne(size, Colors.white),
                     ),
                     Column(
@@ -98,7 +98,7 @@ Widget getTwoColumn(Size size, BuildContext context, UserResponse? userResponse,
                         ),
                           SizedBox(width: 3),
                           Text(
-                            'active_referrals'.tr().toString(),
+                            "Active Referrals",
                             style: Theme.of(context).textTheme.caption!.copyWith(
                               color: Colors.white,
                             ),
@@ -115,7 +115,7 @@ Widget getTwoColumn(Size size, BuildContext context, UserResponse? userResponse,
                         ),
                           SizedBox(width: 3),
                           Text(
-                            'retained_referrals'.tr().toString(),
+                            "Retained Referrals",
                             style: Theme.of(context).textTheme.caption!.copyWith(
                               color: Colors.white,
                             ),
@@ -132,7 +132,7 @@ Widget getTwoColumn(Size size, BuildContext context, UserResponse? userResponse,
                         ),
                           SizedBox(width: 3),
                           Text(
-                            'inactive_referrals'.tr().toString(),
+                            "Inactive Referrals",
                             style: Theme.of(context).textTheme.caption!.copyWith(
                               color: Colors.white,
                             ),
@@ -183,7 +183,7 @@ Widget getOneColumn(Size size, UserResponse? userResponse, List activityTimeline
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'retention'.tr().toString(),
+                  "Retention",
                   style: headingOne(size, Colors.white),
                 ),
                 Column(
@@ -201,7 +201,7 @@ Widget getOneColumn(Size size, UserResponse? userResponse, List activityTimeline
                     ),
                       SizedBox(width: 3),
                       Text(
-                        'active_referrals'.tr().toString(),
+                        "Active Referrals",
                         style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
                         ),
@@ -218,7 +218,7 @@ Widget getOneColumn(Size size, UserResponse? userResponse, List activityTimeline
                     ),
                       SizedBox(width: 3),
                       Text(
-                        'retained_referrals'.tr().toString(),
+                        "Retained Referrals",
                         style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
                         ),
@@ -235,7 +235,7 @@ Widget getOneColumn(Size size, UserResponse? userResponse, List activityTimeline
                     ),
                       SizedBox(width: 3),
                       Text(
-                        'inactive_referrals'.tr().toString(),
+                        "Inactive Referrals",
                         style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
                         ),
@@ -260,7 +260,7 @@ getActivityTimelineWidget(List activityTimeline, Size size){
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        'activity_timeline'.tr().toString(),
+        "Activity Timeline",
         style: headingOne(size, Colors.white),
       ),
       SizedBox(height: defaultPadding),

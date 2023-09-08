@@ -1,7 +1,7 @@
 import '../../Theme/theme.dart';
 import '../../screens/faq/faq_bloc.dart';
 import '../../screens/faq/faq_event.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -108,7 +108,7 @@ class FAQScreenState extends State<FAQScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'faq'.tr().toString(),
+                      "FAQ",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -138,18 +138,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_one'.tr().toString(),
+              "Q. What is a GainGerms?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_one'.tr().toString(),
+              "GainGerms is a cryptocurrency. The high speed of transactions is a main feature of GainGerms. Cryptocurrencies are implemented on early blockchain platforms due to the low speed of transactions. They are more suitable for investments than for the usage as a payment tool. For instance, Bitcoin can provide only 7 transactions per second for all users while Ethereum can provide only 15. The GainGerms blockchain platform is expected to process millions of transactions per second. It should become a crypto-analog of Visa and MasterCard.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_one'.tr().toString(),
+              "GainGerms is a cryptocurrency. The high speed of transactions is a main feature of GainGerms. Cryptocurrencies are implemented on early blockchain platforms due to the low speed of transactions. They are more suitable for investments than for the usage as a payment tool. For instance, Bitcoin can provide only 7 transactions per second for all users while Ethereum can provide only 15. The GainGerms blockchain platform is expected to process millions of transactions per second. It should become a crypto-analog of Visa and MasterCard.",
               softWrap: true,
             ),
           ),
@@ -168,18 +168,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_two'.tr().toString(),
+              "Q. Why are they free?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_two'.tr().toString(),
+              "10% of the GainGerms mass allocated to a nonprofit organization that maintains the operating capacity of the infrastructure.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_two'.tr().toString(),
+              "10% of the GainGerms mass allocated to a nonprofit organization that maintains the operating capacity of the infrastructure.",
               softWrap: true,
             ),
           ),
@@ -198,18 +198,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_three'.tr().toString(),
+              "Q. How does the lottery work?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_three'.tr().toString(),
+              "There are 10000 tickets on each tour. The probability of winning one ticket is 0.1%. Every day a random number occurs with the ticket number of the winner. The prize is calculated based on the table of winnings.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_three'.tr().toString(),
+              "There are 10000 tickets on each tour. The probability of winning one ticket is 0.1%. Every day a random number occurs with the ticket number of the winner. The prize is calculated based on the table of winnings.",
               softWrap: true,
             ),
           ),
@@ -228,18 +228,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_four'.tr().toString(),
+              "Q. What is a User level?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_four'.tr().toString(),
+              "There is an indicator of the user activity on the site that helps to identify real users from bots that automatically try to trick the system. When you reach a new level, you get bonuses.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_four'.tr().toString(),
+              "There is an indicator of the user activity on the site that helps to identify real users from bots that automatically try to trick the system. When you reach a new level, you get bonuses.",
               softWrap: true,
             ),
           ),
@@ -258,18 +258,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_five'.tr().toString(),
+              "Q. The roll rime has increased. Why?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_five'.tr().toString(),
+              "You have reached the daily limit.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_five'.tr().toString(),
+              "You have reached the daily limit.",
               softWrap: true,
             ),
           ),
@@ -288,18 +288,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_six'.tr().toString(),
+              "Q. I have uploaded a new video. How long does it take to moderate it?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_six'.tr().toString(),
+              "Overall, it depends on the moderation queue. Some videos are moderated by the neural network immediately, some are sent for a manual review so you'll need to wait for a few days.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_six'.tr().toString(),
+              "Overall, it depends on the moderation queue. Some videos are moderated by the neural network immediately, some are sent for a manual review so you'll need to wait for a few days.",
               softWrap: true,
             ),
           ),
@@ -318,18 +318,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_seven'.tr().toString(),
+              "Q. What is a smart contract?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_seven'.tr().toString(),
+              "A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. The goal of smart contracts is to provide security that is superior to traditional contract law and to reduce other transaction costs associated with contracting. Various cryptocurrencies have implemented types of smart contracts.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_seven'.tr().toString(),
+              "A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. The goal of smart contracts is to provide security that is superior to traditional contract law and to reduce other transaction costs associated with contracting. Various cryptocurrencies have implemented types of smart contracts.",
               softWrap: true,
             ),
           ),
@@ -348,18 +348,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_eight'.tr().toString(),
+              "Q. What does a risky contract mean?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_eight'.tr().toString(),
+              "It means that this contract has to be confirmed every day; otherwise you will have to pay a penalty. As an example, if you have a contract on the 10th day, you need to confirm it on the 11th, 12th, 13th, 14th day and sign it on the 15th day. You can skip days with a regular contract and sign it during 2 months after its completion.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_eight'.tr().toString(),
+              "It means that this contract has to be confirmed every day; otherwise you will have to pay a penalty. As an example, if you have a contract on the 10th day, you need to confirm it on the 11th, 12th, 13th, 14th day and sign it on the 15th day. You can skip days with a regular contract and sign it during 2 months after its completion.",
               softWrap: true,
             ),
           ),
@@ -378,18 +378,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_nine'.tr().toString(),
+              "Q. How can I delete my account?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_nine'.tr().toString(),
+              "To delete your account, press the button:",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_nine'.tr().toString(),
+              "To delete your account, press the button:",
               softWrap: true,
             ),
           ),
@@ -408,18 +408,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_ten'.tr().toString(),
+              "Q. Why is my Available balance less than the Balance on dashboard?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_ten'.tr().toString(),
+              "Due to the frequent fraudulent activities, we had to add a deferred payment (payment delay or payment of remuneration). GainGerms, will be transferred from the Pending balance to the Available balance as soon as your referral reaches level 2.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_ten'.tr().toString(),
+              "Due to the frequent fraudulent activities, we had to add a deferred payment (payment delay or payment of remuneration). GainGerms, will be transferred from the Pending balance to the Available balance as soon as your referral reaches level 2.",
               softWrap: true,
             ),
           ),
@@ -438,18 +438,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_eleven'.tr().toString(),
+              "Q. What is the minimum withdrawal?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_eleven'.tr().toString(),
+              "Today it is 5000 GainGerms.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_eleven'.tr().toString(),
+              "Today it is 5000 GainGerms.",
               softWrap: true,
             ),
           ),
@@ -468,18 +468,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_twelve'.tr().toString(),
+              "Q. When do I get money to my card?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_twelve'.tr().toString(),
+              "You will get the money as soon as our moderator is ready with your account check. Usually within two weeks, but in some cases it may take longer. You don't need to pay anything. If you use an e-wallet, you'll get the money immediately, but you'll need to wait a couple of days if you have VISA or MasterCard.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_twelve'.tr().toString(),
+              "You will get the money as soon as our moderator is ready with your account check. Usually within two weeks, but in some cases it may take longer. You don't need to pay anything. If you use an e-wallet, you'll get the money immediately, but you'll need to wait a couple of days if you have VISA or MasterCard.",
               softWrap: true,
             ),
           ),
@@ -498,18 +498,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_thirteen'.tr().toString(),
+              "Q. Suspicious activity, what is it?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_thirteen'.tr().toString(),
+              "1. Using third-party programs\n2. Using scripts that automate actions on the site\n3. Attempts to cheat the system\n Your account has been sent for review. Do not break the rules of the site and the blocking will be removed in a few days.\n",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_thirteen'.tr().toString(),
+              "1. Using third-party programs\n2. Using scripts that automate actions on the site\n3. Attempts to cheat the system\n Your account has been sent for review. Do not break the rules of the site and the blocking will be removed in a few days.\n",
               softWrap: true,
             ),
           ),
@@ -528,18 +528,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_fourteen'.tr().toString(),
+              "Q. Suspicious activity on your referral link, what is it?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_fourteen'.tr().toString(),
+              "Many users try to cheat on our website and register a lot of accounts. These actions are prohibited. Some people are engaged in spamming and send their referral links wherever it is possible. That is why we had to make some restrictions on acquiring new referrals. If you have a large audience, send us a message to support with a detailed description of how you are going to acquire new referrals.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_fourteen'.tr().toString(),
+              "Many users try to cheat on our website and register a lot of accounts. These actions are prohibited. Some people are engaged in spamming and send their referral links wherever it is possible. That is why we had to make some restrictions on acquiring new referrals. If you have a large audience, send us a message to support with a detailed description of how you are going to acquire new referrals.",
               softWrap: true,
             ),
           ),
@@ -558,18 +558,18 @@ class FAQScreenState extends State<FAQScreen> {
               tapBodyToCollapse: true,
             ),
             header: Text(
-              'question_fifteen'.tr().toString(),
+              "Q. Can I register multiple accounts?",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
             collapsed: Text(
-              'ans_fifteen'.tr().toString(),
+              "No, this is strictly prohibited by the rules. You can read the Terms and Conditions here.",
               softWrap: true,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             expanded: Text(
-              'ans_fifteen'.tr().toString(),
+              "No, this is strictly prohibited by the rules. You can read the Terms and Conditions here.",
               softWrap: true,
             ),
           ),

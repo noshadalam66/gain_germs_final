@@ -5,7 +5,7 @@ import '../../../Models/random_winner_model.dart';
 import '../../../Models/user_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import '../../../constants/constants.dart';
 
 import '../../../Models/commonmodel.dart';
@@ -25,19 +25,19 @@ class FirstFourLayoutInfoCard extends StatelessWidget {
     String firstText = "", secondText = "", iconString = "";
     if(index == 0){
       firstText = "${info?.customerData?.totalSpinRolled}";
-      secondText = 'rolls'.tr().toString();
+      secondText = "Rolls";
       iconString = "assets/images/roll.png";
     }else if(index == 1){
       firstText = "${info?.customerData?.noOfReferrals}";
-      secondText = 'invited'.tr().toString();
+      secondText = "Invited";
       iconString = "assets/images/referrals.png";
     }else if(index == 2){
       firstText = "${info?.customerData?.totalSignedContract}";
-      secondText = 'smart_contracts'.tr().toString();
+      secondText = "Smart Contracts";
       iconString = "assets/images/smart_contract.png";
     }else if(index == 3){
       firstText = "${info?.customerData?.totalVideoWatched}";
-      secondText = 'watched_videos'.tr().toString();
+      secondText = "Watched Videos";
       iconString = "assets/images/videos.png";
     }
     return Container(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 
 import '../Theme/size_config.dart';
 import '../Theme/theme.dart';
@@ -32,7 +32,7 @@ class AlertUtility {
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('ok'.tr().toString()),
+              child: Text("Ok"),
               onPressed: () {
                 Navigator.of(context).pop();
               },

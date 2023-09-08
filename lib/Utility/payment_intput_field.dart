@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
@@ -11,8 +10,8 @@ getCommaSeparatedAmtCurrency(val) {
   try {
     val = (val == null || val.toString().trim().isEmpty) ? "0.00" : val;
     val = val is int ? val.toString() : double.parse(val.toString());
-    final oCcy = NumberFormat.simpleCurrency(locale: "en",name: "", decimalDigits: 2);
-    return oCcy.format(val);
+    // final oCcy = NumberFormat.simpleCurrency(locale: "en",name: "", decimalDigits: 2);
+    return val;
   } catch (e) {
     return "0.00";
   }

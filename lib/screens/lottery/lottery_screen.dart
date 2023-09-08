@@ -4,7 +4,7 @@ import '../../Theme/theme.dart';
 import '../../Models/lottery_prizes.dart';
 import '../../Models/user_details.dart';
 import '../../screens/lottery/index.dart';
-import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../constants/constants.dart';
@@ -214,7 +214,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                   SizedBox(height: defaultPadding * 1.5),
                   Container(
                     child: Text(
-                      'lottery'.tr().toString(),
+                      "Lottery",
                       style: headingOne(_size, Colors.white),
                     ),
                     alignment: Alignment.topLeft,
@@ -420,7 +420,7 @@ class LotteryScreenState extends State<LotteryScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'your_tickets'.tr().toString(),
+            "Your Tickets",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -464,7 +464,7 @@ class LotteryScreenState extends State<LotteryScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'win_chance'.tr().toString(),
+            "Win Chance",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -509,7 +509,7 @@ class LotteryScreenState extends State<LotteryScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            'result_in'.tr().toString(),
+            "Result In",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -553,7 +553,7 @@ class LotteryScreenState extends State<LotteryScreen> {
           ),
           SizedBox(height: defaultPadding / 1.5),
           Text(
-            'tickets_left'.tr().toString(),
+            "Tickets Left",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.caption!.copyWith(
                   color: Colors.white,
@@ -571,7 +571,7 @@ class LotteryScreenState extends State<LotteryScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'buy_tickets'.tr().toString(),
+            "Buy Tickets",
             style: headingOne(size, Colors.white),
           ),
           SizedBox(height: defaultPadding),
@@ -604,7 +604,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                       });
                     }
                   },
-                  child: Text('-'.tr().toString()),
+                  child: Text('-'),
                 ),
                 SizedBox(
                   width: 60,
@@ -640,11 +640,11 @@ class LotteryScreenState extends State<LotteryScreen> {
                         price = myNoOfTickets * int.parse(userResponse?.customerData?.ticketPrice ?? "0");
                         winChance = myNoOfTickets / 100;
                       }else{
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('you_dont_have_available_germs'.tr().toString())));
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("You don not have enough germs to buy more tickets")));
                       }
                     });
                   },
-                  child: Text('+'.tr().toString()),
+                  child: Text('+'),
                 )
               ],
             ),
@@ -661,7 +661,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                     borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
                   ),
                   child: Text(
-                    'price'.tr().toString(),
+                    "Price",
                     style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
                         ),
@@ -673,7 +673,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                 child: TextField(
                   decoration: InputDecoration(
                     // prefixIcon: Icon(Icons.money, color: Colors.grey),
-                    hintText: "${int.parse(userResponse?.customerData?.ticketPrice ?? "0")}" + " " + 'germs'.tr().toString(),
+                    hintText: "${int.parse(userResponse?.customerData?.ticketPrice ?? "0")}" + " " + "Germs",
                     enabled: false,
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
@@ -696,7 +696,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                     borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
                   ),
                   child: Text(
-                    'min_win_chance'.tr().toString(),
+                    "Min Win Chance",
                     style: Theme.of(context).textTheme.caption!.copyWith(
                           color: Colors.white,
                         ),
@@ -733,7 +733,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                     borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
                   ),
                   child: Text(
-                    'available_balance'.tr().toString(),
+                    "Available Balance",
                     style: Theme.of(context).textTheme.caption!.copyWith(
                       color: Colors.white,
                     ),
@@ -750,7 +750,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                     // prefixIcon: Icon(Icons.person, color: Colors.white),
                     hintText: "${userResponse?.customerData?.availableGains}" +
                         " " +
-                        'germs'.tr().toString(),
+                        "Germs",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
@@ -793,7 +793,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                 userResponse?.customerData?.lotteryId ?? "1",
                 userResponse?.customerData?.ticketPrice ?? "1"));
             },
-            child: Text('buy'.tr().toString()),
+            child: Text("Buy!"),
           )
         ],
       ),
@@ -811,7 +811,7 @@ class LotteryScreenState extends State<LotteryScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'prizes'.tr().toString(),
+            "Prizes",
             style: headingOne(size, Colors.white),
           ),
           SizedBox(
@@ -832,7 +832,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                 // minWidth: 600,
                 columns: [
                   DataColumn(
-                    label: Text('position'.tr().toString(),
+                    label: Text("Position",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -841,7 +841,7 @@ class LotteryScreenState extends State<LotteryScreen> {
                                 fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('payout'.tr().toString(),
+                    label: Text("Payout",
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
@@ -909,7 +909,7 @@ class LotteryScreenState extends State<LotteryScreen> {
           Container(
             padding: EdgeInsets.all(defaultPadding),
             child: Text(
-              'last_five_rounds'.tr().toString(),
+              "Last 5 Rounds",
               style: headingOne(size, Colors.white),
             ),
           ),
@@ -924,27 +924,27 @@ class LotteryScreenState extends State<LotteryScreen> {
                 // minWidth: 600,
                 columns: [
                   DataColumn(
-                    label: Text('lottery_round'.tr().toString(),
+                    label: Text("Lottery Round",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('tickets'.tr().toString(),
+                    label: Text("Tickets",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('status'.tr().toString(),
+                    label: Text("Status",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('won_tickets'.tr().toString(),
+                    label: Text("Won Tickets",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
                   DataColumn(
-                    label: Text('won_amount'.tr().toString(),
+                    label: Text("Won Amount",
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),
