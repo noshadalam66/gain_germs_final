@@ -327,7 +327,7 @@ class DepositScreenState extends State<DepositScreen> {
                     keyboardType: TextInputType.number,
                     controller: _textController,
                     decoration: InputDecoration(
-                      prefixText: "USD" + " ",
+                      prefixText: "\$" + " ",
                       hintText: "1",
                       hintStyle: TextStyle(color: Colors.grey),
                       border: OutlineInputBorder(
@@ -379,7 +379,7 @@ class DepositScreenState extends State<DepositScreen> {
                   keyboardType: TextInputType.number,
                   controller: _textController,
                   decoration: InputDecoration(
-                    prefixText: "USD" + " ",
+                    prefixText: "\$" + " ",
                     hintText: "1",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
@@ -450,7 +450,7 @@ class DepositScreenState extends State<DepositScreen> {
           ),
           SizedBox(height: defaultPadding / 2),
           Text(
-            "USD" + " " + "${userResponse?.customerData?.depositedGains}",
+            "\$" + " " + "${userResponse?.customerData?.depositedGains}",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),

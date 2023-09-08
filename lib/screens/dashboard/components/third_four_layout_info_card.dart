@@ -30,7 +30,7 @@ class ThirdFourLayoutInfoCard extends StatelessWidget {
       double gp = double.parse(info?.customerData?.gainPrice ?? "0.0");
       double amount = tg * gp;
 
-      firstText = "USD" + " " + "${amount.toStringAsFixed(2)}";
+      firstText = "\$" + " " + "${amount.toStringAsFixed(2)}";
       secondText = "Balance";
       iconString = "assets/images/roll.png";
     }else if(index == 1){
@@ -38,7 +38,7 @@ class ThirdFourLayoutInfoCard extends StatelessWidget {
       secondText = "Balance";
       iconString = "assets/images/card.png";
     }else if(index == 2){
-      firstText = "USD" + " " + "${info?.customerData?.gainPrice}";
+      firstText = "\$" + " " + "${info?.customerData?.gainPrice}";
       secondText = "Germs Price";
       iconString = "assets/images/graph.png";
     }else if(index == 3){

@@ -250,7 +250,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
               child: TextField(
                 decoration: InputDecoration(
                   // prefixIcon: Icon(Icons.person, color: Colors.white),
-                  hintText: "USD" + " " + "${withdrawalAmount}",
+                  hintText: "\$" + " " + "${withdrawalAmount}",
                   hintStyle: TextStyle(color: Colors.grey),
                   enabled: false,
                   border: OutlineInputBorder(
@@ -348,7 +348,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
             TextField(
               decoration: InputDecoration(
                 // prefixIcon: Icon(Icons.person, color: Colors.white),
-                hintText: "USD" + " ",
+                hintText: "\$" + " ",
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -553,7 +553,7 @@ class WithdrawalScreenState extends State<WithdrawalScreen> {
           ),
           SizedBox(height: defaultPadding),
           Text(
-            "USD"+ " " + "${userResponse?.customerData?.totalWithdrawalsAmount}",
+            "\$"+ " " + "${userResponse?.customerData?.totalWithdrawalsAmount}",
             textAlign: TextAlign.center,
             style: headingOne(size, Colors.white),
           ),
