@@ -29,7 +29,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>gain_germs_final</title>
+  <title>GainGerms</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -38,6 +38,28 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCUfZOZgLDq3rMUD8ieAfNoct3M2IyjqRo",
+      authDomain: "gaingerms-a9626.firebaseapp.com",
+      projectId: "gaingerms-a9626",
+      storageBucket: "gaingerms-a9626.appspot.com",
+      messagingSenderId: "162111442440",
+      appId: "1:162111442440:web:fbb660ae90d9263afacbbd",
+      measurementId: "G-3XF1TQWHR0"
+    };
+
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+  </script>
+
+
 </head>
 <body>
   <script>
