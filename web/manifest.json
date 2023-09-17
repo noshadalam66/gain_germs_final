@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "GainGerms is a blockchain-based digital project developed to be fast, safe, scalable and capable of processing millions of transactions per second.",
+    "description": "GainGerms is a blockchain-based digital project developed to be fast, safe, scalable and capable of processing millions of transactions per second. It is designed to compete with Ethereum smart contracts and decentralized applications, while being extremely scalable.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
