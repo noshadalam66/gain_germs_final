@@ -120,11 +120,11 @@ class _SecondThreeLayoutInfoCardState extends State<SecondThreeLayoutInfoCard> {
   // }
 
   // countDownTimerRoll() {
-  //   if (widget.info?.customerData?.rollTime != "0") {
+  //   if (widgets.info?.customerData?.rollTime != "0") {
   //     int currentMilliseconds = DateTime.now().millisecondsSinceEpoch;
   //     double currentSeconds = currentMilliseconds / 1000;
   //     // rollTime coming as date not as millisecond
-  //     int rollTimeMilliseconds = widget.info?.customerData?.rollTime == "0" ? 0 : int.parse(widget.info?.customerData?.rollTime ?? "0");
+  //     int rollTimeMilliseconds = widgets.info?.customerData?.rollTime == "0" ? 0 : int.parse(widgets.info?.customerData?.rollTime ?? "0");
   //     double rollTimeSeconds = (rollTimeMilliseconds / 1000);
   //
   //     double differenceInSeconds = currentSeconds - rollTimeSeconds;
@@ -171,11 +171,11 @@ class _SecondThreeLayoutInfoCardState extends State<SecondThreeLayoutInfoCard> {
       }
     }
 
-    // if (widget.info?.customerData?.smartContractTime != "0") {
+    // if (widgets.info?.customerData?.smartContractTime != "0") {
     //   int currentMilliseconds = DateTime.now().millisecondsSinceEpoch;
     //   double currentSeconds = currentMilliseconds / 1000;
     //   // rollTime coming as date not as millisecond
-    //   int rollTimeMilliseconds = widget.info?.customerData?.smartContractTime == "0" ? 0 : int.parse(widget.info?.customerData?.smartContractTime ?? "0");
+    //   int rollTimeMilliseconds = widgets.info?.customerData?.smartContractTime == "0" ? 0 : int.parse(widgets.info?.customerData?.smartContractTime ?? "0");
     //   double rollTimeSeconds = (rollTimeMilliseconds / 1000);
     //
     //   double differenceInSeconds = currentSeconds - rollTimeSeconds;

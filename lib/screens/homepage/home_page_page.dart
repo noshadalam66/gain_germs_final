@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gain_germs_final/Theme/theme.dart';
 import 'index.dart';
 
 class HomePagePage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomePagePageState extends State<HomePagePage> {
   Widget build(BuildContext context) {
     dynamic dynamicValue = ModalRoute.of(context)!.settings.arguments ;
     return Scaffold(
-      // backgroundColor: QIBTheme().getTheme().white,
+      backgroundColor: GainGermsTheme().getTheme().backGroundColor,
       body: Stack(
         children: [
           HomePageScreen(
