@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gain_germs_final/routes/app.dart';
+import 'package:gain_germs_final/screens/homepage/home_page_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_strategy/url_strategy.dart';
 import 'dart:convert';
@@ -14,7 +15,7 @@ import 'helper/shared_preferences.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'dart:math';
-import 'package:admanager_web/admanager_web.dart';
+// import 'package:admanager_web/admanager_web.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,11 +57,11 @@ Future<void> main() async {
   bool isUserLoggedIn = await getBoolValuesSF(isLoggedIn);
 
 
-  runApp(App(
-    isLoggedIn: isUserLoggedIn,
-  ));
+  // runApp(App(
+  //   isLoggedIn: isUserLoggedIn,
+  // ));
 
-  // runApp(const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -90,7 +91,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePagePage()//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -254,7 +255,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
+//
 // class MyApp extends StatelessWidget {
 //   const MyApp({super.key});
 //
@@ -280,29 +281,30 @@ class _MyHomePageState extends State<MyHomePage> {
 // }
 //
 // class _MyHomePageState extends State<MyHomePage> {
-//   List<Widget> contentssss = [
-//     Row(
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       children: const [
-//         Padding(
-//           padding: EdgeInsets.all(8.0),
-//           child: Text("Click + button to add content and AD example"),
-//         ),
-//       ],
-//     )
-//   ];
+//   List<Widget>? contentssss;
+//   @override
+//   void initState() {
+//     super.initState();
+//
+//     contentssss = [
+//       Row(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: const [
+//           Padding(
+//             padding: EdgeInsets.all(8.0),
+//             child: Text("Click + button to add content and AD example"),
+//           ),
+//         ],
+//       )
+//     ];
+//     _addMoreContent();
+//   }
+//
+//
 //
 //   void _addMoreContent() {
 //     List<Widget> newContent = [];
 //
-//     // Texts to randomize the content
-//     List<String> lorem = [
-//       "Nisi meatball commodo in lorem frankfurter.  Salami brisket nulla chuck bacon excepteur cupidatat elit quis.  Est dolore ut turducken.  Picanha ut salami in commodo labore tenderloin shank in pancetta tri-tip do ball tip nostrud ut.  Sed ullamco turducken, swine alcatra flank irure hamburger sint fugiat qui corned beef.  Andouille qui ball tip sed.",
-//       "Cow cupim cillum, short ribs anim prosciutto proident leberkas.  Laborum bresaola commodo sed doner dolore, non ground round adipisicing frankfurter.  Ad prosciutto ribeye, meatball burgdoggen adipisicing ut cow porchetta shank pariatur sunt ham hock.  Beef ribs cow deserunt cillum ut in landjaeger cupidatat prosciutto pork.  In tenderloin short ribs ipsum sunt, t-bone tail jerky pork landjaeger venison sirloin cupidatat aliqua.  Elit tri-tip duis jowl doner salami culpa sint short loin commodo sunt ground round.  Nulla est mollit esse dolore, kevin ipsum meatloaf short ribs dolore beef ribs short loin culpa landjaeger venison.",
-//       "Ex cow laboris hamburger, chislic ullamco occaecat eiusmod doner commodo tongue in cillum irure.  Occaecat swine excepteur chicken in culpa, in corned beef pork chop anim dolore.  Do ham hock salami minim sint.  Shank pastrami bacon elit esse.",
-//       "Beef ribs dolor biltong burgdoggen, sunt esse pork.  Kielbasa ullamco alcatra short ribs consectetur swine.  Capicola ham hock chuck cupim, burgdoggen incididunt rump sint exercitation brisket flank boudin shoulder jowl et.  Sunt biltong ground round buffalo magna ball tip fugiat pariatur alcatra lorem cow pork aliqua eiusmod t-bone.  Drumstick pork ea, officia ipsum spare ribs dolor lorem kevin velit bacon swine shankle boudin occaecat.  Adipisicing swine ground round officia dolore lorem.  Duis laboris hamburger exercitation, alcatra voluptate jowl mollit occaecat corned beef short ribs qui pancetta.",
-//       "Prosciutto occaecat laborum flank nisi pork loin est tongue officia lorem jerky andouille drumstick cow do.  Quis boudin pastrami tail nostrud cow ball tip buffalo pork salami shoulder enim rump nisi.  Sunt ut pork belly anim, et ut meatball do fatback ad nostrud porchetta.  Prosciutto meatball chislic excepteur nisi salami fatback lorem capicola cillum.  Aute biltong alcatra, minim do non andouille ad tail occaecat ham hock mollit beef ribs.  Voluptate sausage cupim do jerky id.  Ball tip tempor pork belly, nisi esse cupidatat fatback dolor quis prosciutto occaecat porchetta pig reprehenderit."
-//     ];
 //
 //     // Add Ad from AdManager using the AdManager package
 //     newContent.add(const Padding(
@@ -313,14 +315,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //       ),
 //     ));
 //
-//     // Add lorem text
-//     newContent.add(
-//       Padding(
-//         padding: const EdgeInsets.all(8.0),
-//         child: Text(lorem[Random().nextInt(lorem.length)]),
-//       ),
-//     );
-//
 //     // Add Ad from AdManager using the AdManager package
 //     newContent.add(const Padding(
 //       padding: EdgeInsets.all(8.0),
@@ -330,13 +324,89 @@ class _MyHomePageState extends State<MyHomePage> {
 //       ),
 //     ));
 //
-//     setState(() {
-//       contentssss.addAll(newContent);
-//     });
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.mediumRectangle],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.banner],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.mobileBanner],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.mobileLeaderboard],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.mobileBannerLarger],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.skyscraper],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.wideSkyscraper],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//     // Add Ad from AdManager using the AdManager package
+//     newContent.add(const Padding(
+//       padding: EdgeInsets.all(8.0),
+//       child: AdBlock(
+//         size: [AdBlockSize.helfPage],
+//         adUnitId: "/6355419/Travel/Europe",
+//       ),
+//     ));
+//
+//
+//
+//     // setState(() {
+//       contentssss!.addAll(newContent);
+//     // });
 //   }
 //
 //   @override
 //   Widget build(BuildContext context) {
+//     _addMoreContent();
+//
 //     return Scaffold(
 //       appBar: AppBar(
 //         title: Text(widget.title),
@@ -344,14 +414,14 @@ class _MyHomePageState extends State<MyHomePage> {
 //       body: SingleChildScrollView(
 //         child: Column(
 //           crossAxisAlignment: CrossAxisAlignment.center,
-//           children: contentssss,
+//           children: contentssss!,
 //         ),
 //       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: _addMoreContent,
-//         tooltip: 'Add Content',
-//         child: const Icon(Icons.add),
-//       ),
+//       // floatingActionButton: FloatingActionButton(
+//       //   onPressed: _addMoreContent,
+//       //   tooltip: 'Add Content',
+//       //   child: const Icon(Icons.add),
+//       // ),
 //     );
 //   }
 // }

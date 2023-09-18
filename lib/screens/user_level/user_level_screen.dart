@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:gain_germs_final/Theme/size_config.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../routes/route_delegate.dart';
@@ -76,8 +77,6 @@ class UserLevelScreenState extends State<UserLevelScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-
     final Size _size = MediaQuery.of(context).size;
     return BlocConsumer<UserLevelBloc, UserLevelState>(
         bloc: widget._userLevelBloc,
@@ -194,7 +193,7 @@ class UserLevelScreenState extends State<UserLevelScreen> {
             height: 12,
             decoration: BoxDecoration(
               color: GainGermsTheme().getTheme().backGroundColor,
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              // borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
           ),
           getSecondLayout(size),
@@ -258,160 +257,169 @@ class UserLevelScreenState extends State<UserLevelScreen> {
   }
 
   Widget getFirstLayout(Size size) {
-    return Container(
-      padding: EdgeInsets.all(defaultPadding),
-
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-              flex: 7,
-              child: Column(
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(defaultPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Category",
+                style: headingOne(size, Colors.white),
+              ),
+              SizedBox(height: defaultPadding*2.2),
+              Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Category",
-                    style: headingOne(size, Colors.white),
-                  ),
-                  SizedBox(height: defaultPadding),
-                  UserLevelPieChart(),
-                  SizedBox(height: defaultPadding),
-                ],
-              )),
-          Expanded(
-              flex: 3,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(height: 5),
-                  Row(
-                    children: [
-                      Container(
-                        height: 12,
-                        width: 12,
-                        decoration: BoxDecoration(
-                          color: AppColors.contentColorBlue,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(6)),
-                        ),
-                      ),
-                      SizedBox(width: 3),
-                      Text(
-                        "Online",
-                        style: Theme.of(context).textTheme.caption!.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                  Expanded(
+                      flex: 7,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          UserLevelPieChart(),
+                          SizedBox(height: defaultPadding),
+                        ],
+                      )),
+                  Expanded(
+                      flex: 3,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 5),
+                          Row(
+                            children: [
+                              Container(
+                                height: 12,
+                                width: 12,
+                                decoration: BoxDecoration(
+                                  color: AppColors.contentColorBlue,
+                                  borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                                ),
+                              ),
+                              SizedBox(width: 3),
+                              Text(
+                                "Online",
+                                style: Theme.of(context).textTheme.caption!.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 5),
+                          Row(children: [
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: BoxDecoration(
+                                color: AppColors.contentColorYellow,
+                                borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                              ),
                             ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Row(children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(
-                        color: AppColors.contentColorYellow,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(6)),
-                      ),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "Free",
-                      style: Theme.of(context).textTheme.caption!.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ]),
-                  SizedBox(height: 5),
-                  Row(children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(
-                        color: AppColors.contentColorPurple,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(6)),
-                      ),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "Referrals",
-                      style: Theme.of(context).textTheme.caption!.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ]),
-                  SizedBox(height: 5),
-                  Row(children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(
-                        color: AppColors.contentColorGreen,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(6)),
-                      ),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "Videos",
-                      style: Theme.of(context).textTheme.caption!.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ]),
-                  SizedBox(height: 5),
-                  Row(children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(
-                        color: AppColors.contentColorGreen,
-                        borderRadius:
-                        const BorderRadius.all(Radius.circular(6)),
-                      ),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "Smart-Contract",
-                      style: Theme.of(context).textTheme.caption!.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ]),
-                  SizedBox(height: 5),
-                  Row(children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(
-                        color: AppColors.contentColorGreen,
-                        borderRadius:
-                        const BorderRadius.all(Radius.circular(6)),
-                      ),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "Lottery",
-                      style: Theme.of(context).textTheme.caption!.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ]),
+                            SizedBox(width: 3),
+                            Text(
+                              "Free",
+                              style: Theme.of(context).textTheme.caption!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 5),
+                          Row(children: [
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: BoxDecoration(
+                                color: AppColors.contentColorPurple,
+                                borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                              ),
+                            ),
+                            SizedBox(width: 3),
+                            Text(
+                              "Referrals",
+                              style: Theme.of(context).textTheme.caption!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 5),
+                          Row(children: [
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: BoxDecoration(
+                                color: AppColors.contentColorGreen,
+                                borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                              ),
+                            ),
+                            SizedBox(width: 3),
+                            Text(
+                              "Videos",
+                              style: Theme.of(context).textTheme.caption!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 5),
+                          Row(children: [
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: BoxDecoration(
+                                color: AppColors.contentColorGreen,
+                                borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                              ),
+                            ),
+                            SizedBox(width: 3),
+                            Text(
+                              "Smart-Contract",
+                              style: Theme.of(context).textTheme.caption!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ]),
+                          SizedBox(height: 5),
+                          Row(children: [
+                            Container(
+                              height: 12,
+                              width: 12,
+                              decoration: BoxDecoration(
+                                color: AppColors.contentColorGreen,
+                                borderRadius:
+                                const BorderRadius.all(Radius.circular(6)),
+                              ),
+                            ),
+                            SizedBox(width: 3),
+                            Text(
+                              "Lottery",
+                              style: Theme.of(context).textTheme.caption!.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ]),
+                        ],
+                      )),
                 ],
-              )),
-        ],
-      ),
+              ),
+              SizedBox(height: defaultPadding*1.2),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
