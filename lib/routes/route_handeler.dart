@@ -2,11 +2,10 @@
 enum RouteData {
   /// For routes for which we want to show unkown page that are not being parsed
   unkownRoute,
-
   /// For routes that are parsed but not data is found for them eg. /user/?userName=abc and abc doesnt exist
   notFound,
-
   splash,
+  homePage,
   login,
   home,
   register,

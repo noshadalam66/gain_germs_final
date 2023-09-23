@@ -6,9 +6,7 @@ class RoutePath {
   RoutePath.auth(this.pathName) : isUnknown = false;
   RoutePath.home(this.pathName) : isUnknown = false;
   RoutePath.otherPage(this.pathName) : isUnknown = false;
-  RoutePath.unknown()
-      : pathName = null,
-        isUnknown = true;
+  RoutePath.unknown(): pathName = null, isUnknown = true;
 
   bool get isAuthPage => pathName == null;
   bool get isHomePage => pathName == null;

@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gain_germs_final/routes/app.dart';
 import 'package:gain_germs_final/screens/homepage/home_page_page.dart';
+import 'package:gain_germs_final/screens/homepage/home_page_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_strategy/url_strategy.dart';
 import 'dart:convert';
@@ -57,11 +58,11 @@ Future<void> main() async {
   bool isUserLoggedIn = await getBoolValuesSF(isLoggedIn);
 
 
-  // runApp(App(
-  //   isLoggedIn: isUserLoggedIn,
-  // ));
+  runApp(App(
+    isLoggedIn: isUserLoggedIn,
+  ));
 
-  runApp(const MyApp());
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gain_germs_final/routes/route_handeler.dart';
 import 'package:gain_germs_final/routes/route_path.dart';
+import 'package:gain_germs_final/screens/homepage/home_page_page.dart';
+import 'package:gain_germs_final/screens/homepage/home_page_screen.dart';
 
 import '../helper/shared_preferences.dart';
 import '../screens/auth/login_screen.dart';
@@ -37,7 +39,7 @@ class AppRouterDelegate extends RouterDelegate<RoutePath>
     if (isError) {
       return RoutePath.unknown();
     }
-    if (pathName == null) return RoutePath.home('splash'); //main
+    if (pathName == null) return RoutePath.home('homePage'); //main
 
     return RoutePath.otherPage(pathName);
   }
@@ -68,6 +70,13 @@ class AppRouterDelegate extends RouterDelegate<RoutePath>
     MaterialPage(
       key: const ValueKey('register'),
       child: RegisterScreen(),
+    ),
+  ];
+
+  List<Page> get _homePageStackRegister => [
+    MaterialPage(
+      key: const ValueKey('homePage'),
+      child: HomePagePage(),
     ),
   ];
 
@@ -120,9 +129,11 @@ class AppRouterDelegate extends RouterDelegate<RoutePath>
         _stack = _authStackTNC;
       }else if (pathName == RouteData.privacy_policy.name) {
         _stack = _authStackPP;
+      }else if (pathName == RouteData.homePage.name){
+        _stack = _homePageStackRegister;
       }
     } else {
-      _stack = _authStackLogin;
+      _stack = _homePageStackRegister;
       // _stack = _unknownRoute;
     }
 
@@ -195,11 +206,14 @@ class AppRouterDelegate extends RouterDelegate<RoutePath>
             isError = false;
           }
         } else {
-          if (configuration.pathName == RouteData.login.name) {
-            pathName = RouteData.login.name;
+          if (configuration.pathName == RouteData.homePage.name) {
+            pathName = RouteData.homePage.name;
             isError = false;
           } else if (configuration.pathName == RouteData.register.name) {
             pathName = RouteData.register.name;
+            isError = false;
+          } else if (configuration.pathName == RouteData.login.name) {
+            pathName = RouteData.login.name;
             isError = false;
           } else if (configuration.pathName == RouteData.term_and_condition.name) {
             pathName = RouteData.term_and_condition.name;
@@ -211,7 +225,7 @@ class AppRouterDelegate extends RouterDelegate<RoutePath>
             pathName = configuration.pathName;//RouteData.register.name;
             isError = false;
           } else{
-            pathName = RouteData.login.name;
+            pathName = RouteData.homePage.name;
             isError = false;
           }
         }
